@@ -30,13 +30,12 @@ const SIZES = SELF_TEST ? [[390, 664]] : FLAKY ? [[390, 664], [1440, 900]]
   : [[320, 568], [375, 553], [390, 600], [390, 664], [393, 659], [844, 390], [768, 1024], [1366, 657], [1440, 900]];
 const THEMES = SELF_TEST || FLAKY ? ['light'] : ['light', 'dark'];
 
-// The site as GitHub Pages serves it, under /xinyue-feng/, without a server.
+// The site as GitHub Pages serves it, at the root of lillly1.github.io, without a server.
 const ORIGIN = 'http://site.local';
-const BASE = `${ORIGIN}/xinyue-feng/`;
+const BASE = `${ORIGIN}/`;
 const fileFor = (url) => {
   let p = decodeURIComponent(new URL(url).pathname);
-  if (!p.startsWith('/xinyue-feng/')) return null;
-  p = p.slice('/xinyue-feng/'.length);
+  p = p.slice(1);
   if (p === '' || p.endsWith('/')) p += 'index.html';
   const file = path.join(SITE, p);
   return file.startsWith(SITE + path.sep) && existsSync(file) && !statSync(file).isDirectory() ? file : null;

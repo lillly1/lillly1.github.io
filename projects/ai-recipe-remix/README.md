@@ -6,7 +6,7 @@ AI Recipe Remix is a full-stack web app by Xinyue (Lily) Feng. Type the ingredie
 
 ![AI Recipe Remix: ingredient chips and preferences on the left, recipe cards with photos on the right](docs/screenshot.jpg)
 
-The portfolio hosts a static [demo build](https://samsi0322.github.io/xinyue-feng/play/recipe-remix/) that replays pre-generated results ([how it works](#demo-mode)), so no key is needed to look around. To generate live, [run it locally](#local-setup) with your own OpenAI API key.
+The portfolio hosts a static [demo build](https://lillly1.github.io/play/recipe-remix/) that replays pre-generated results ([how it works](#demo-mode)), so no key is needed to look around. To generate live, [run it locally](#local-setup) with your own OpenAI API key.
 
 ## Features
 

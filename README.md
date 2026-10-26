@@ -1,17 +1,17 @@
 # Xinyue Feng — portfolio
 
-Source for **https://samsi0322.github.io/xinyue-feng/**, the portfolio of Xinyue (Lily) Feng, a Computer Science student at Kean University (class of 2027).
+Source for **https://lillly1.github.io/**, the portfolio of Xinyue (Lily) Feng, a Computer Science student at Kean University (class of 2027).
 
 | Project | Live | Source |
 | --- | --- | --- |
-| **Yuzu Onsen Capybaras**: a cozy pixel-art life sim (JavaScript, HTML canvas, Electron) | [winter demo](https://capybara.sam-si.cn/) · [case study](https://samsi0322.github.io/xinyue-feng/work/yuzu-onsen-capybaras/) | private repository |
-| **Otherworlds**: a crossover boss mod for Terraria, in development (C#, tModLoader) | [case study](https://samsi0322.github.io/xinyue-feng/work/otherworlds/) | not yet public |
-| **Wizarding World**: a Harry Potter mod for Terraria (C#, tModLoader) | [case study](https://samsi0322.github.io/xinyue-feng/work/wizarding-world/) | [SamSi0322/WizardingWorld](https://github.com/SamSi0322/WizardingWorld) |
-| **The Adventures of Edgeworth**: an Ace Attorney platformer (Java Swing, ported to the web) | [play](https://samsi0322.github.io/xinyue-feng/play/edgeworth/) · [case study](https://samsi0322.github.io/xinyue-feng/work/edgeworth/) | [`projects/edgeworth`](projects/edgeworth) |
-| **AI Recipe Remix**: recipes and dish photos from the ingredients you have (React, Express, OpenAI) | [demo](https://samsi0322.github.io/xinyue-feng/play/recipe-remix/) · [case study](https://samsi0322.github.io/xinyue-feng/work/recipe-remix/) | [`projects/ai-recipe-remix`](projects/ai-recipe-remix) |
-| **Tic-Tac-Toe vs. AI**: rule-based AI vs. minimax, with a “Show AI thinking” overlay | [play](https://samsi0322.github.io/xinyue-feng/play/tic-tac-toe/) · [case study](https://samsi0322.github.io/xinyue-feng/work/tic-tac-toe/) | [`projects/tic-tac-toe`](projects/tic-tac-toe) |
+| **Yuzu Onsen Capybaras**: a cozy pixel-art life sim (JavaScript, HTML canvas, Electron) | [winter demo](https://capybara.sam-si.cn/) · [case study](https://lillly1.github.io/work/yuzu-onsen-capybaras/) | private repository |
+| **Otherworlds**: a crossover boss mod for Terraria, in development (C#, tModLoader) | [case study](https://lillly1.github.io/work/otherworlds/) | not yet public |
+| **Wizarding World**: a Harry Potter mod for Terraria (C#, tModLoader) | [case study](https://lillly1.github.io/work/wizarding-world/) | [lillly1/WizardingWorld](https://github.com/lillly1/WizardingWorld) |
+| **The Adventures of Edgeworth**: an Ace Attorney platformer (Java Swing, ported to the web) | [play](https://lillly1.github.io/play/edgeworth/) · [case study](https://lillly1.github.io/work/edgeworth/) | [`projects/edgeworth`](projects/edgeworth) |
+| **AI Recipe Remix**: recipes and dish photos from the ingredients you have (React, Express, OpenAI) | [demo](https://lillly1.github.io/play/recipe-remix/) · [case study](https://lillly1.github.io/work/recipe-remix/) | [`projects/ai-recipe-remix`](projects/ai-recipe-remix) |
+| **Tic-Tac-Toe vs. AI**: rule-based AI vs. minimax, with a “Show AI thinking” overlay | [play](https://lillly1.github.io/play/tic-tac-toe/) · [case study](https://lillly1.github.io/work/tic-tac-toe/) | [`projects/tic-tac-toe`](projects/tic-tac-toe) |
 
-The whole portfolio is also a 20-page PDF (A4 landscape): [download it](https://samsi0322.github.io/xinyue-feng/assets/xinyue-feng-portfolio.pdf).
+The whole portfolio is also a 20-page PDF (A4 landscape): [download it](https://lillly1.github.io/assets/xinyue-feng-portfolio.pdf).
 
 ## Layout
 
