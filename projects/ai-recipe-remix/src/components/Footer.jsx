@@ -13,7 +13,7 @@ export default function Footer() {
           href={SOURCE_URL}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1 self-start font-medium text-tomato-700 underline-offset-2 hover:underline"
+          className="inline-flex items-center gap-1 self-start font-medium text-tomato-700 hover:text-tomato-600"
         >
           Source
           <ArrowUpRightIcon className="h-3.5 w-3.5" />

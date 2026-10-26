@@ -11,7 +11,7 @@ export default function DemoBanner() {
           href={README_SETUP_URL}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-0.5 whitespace-nowrap font-medium underline decoration-cream/50 underline-offset-2 hover:decoration-cream focus-visible:outline-cream"
+          className="inline-flex items-center gap-0.5 whitespace-nowrap font-medium text-honey-200 hover:text-cream focus-visible:outline-cream"
         >
           How to run it
           <ArrowUpRightIcon className="h-3.5 w-3.5" />
@@ -20,7 +20,7 @@ export default function DemoBanner() {
         <span aria-hidden="true"> · </span>
         <a
           href={PROJECT_PAGE_URL}
-          className="whitespace-nowrap font-medium underline decoration-cream/50 underline-offset-2 hover:decoration-cream focus-visible:outline-cream"
+          className="whitespace-nowrap font-medium text-honey-200 hover:text-cream focus-visible:outline-cream"
         >
           About this project
         </a>

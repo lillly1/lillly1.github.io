@@ -1,44 +1,20 @@
-/* The page around the game follows the portfolio: ink on warm paper, or its dark theme
-   (html[data-theme="dark"], set from the same saved choice). The game frame keeps its own night colours. */
 :root {
-  color-scheme: light;
-  --bg: #f3f5fb;
-  --bg-raised: #e7ebf6;
-  --ink: #1a1f3d;
-  --ink-muted: #464d72;
-  --ink-faint: #535a7e;
-  --rule: #d9deee;
-  --rule-strong: rgba(26, 31, 61, 0.28);
-  --accent: #3446b8;
-  --fill: #ac3232;
-  --fill-ink: #ffffff;
-  --frame-line: rgba(26, 31, 61, 0.12);
-
+  --bg: #121212;
+  --bg-raised: #1b1b1b;
+  --ink: #f3efe7;
+  --ink-muted: #a9a399;
+  --ink-faint: #948e86;
+  --rule: rgba(243, 239, 231, 0.14);
+  --rule-strong: rgba(243, 239, 231, 0.32);
+  --gold: #d6a23e;
+  --gold-bright: #e9bd62;
+  --red: #e0574b;
   --night: #031021;
-  --game-ink: #f3efe7;
-  --game-ink-dim: rgba(243, 239, 231, 0.8);
-  --game-accent: #f2a46c;
-  --game-red: #e0574b;
-
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
   --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --pixel: "Fusion Pixel Latin", "IBM Plex Sans", system-ui, sans-serif;
-  --arcade: "Press Start 2P", ui-monospace, monospace;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --pixel: "Press Start 2P", ui-monospace, monospace;
   --bar: 52px;
-}
-
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #141829;
-  --bg-raised: #1c2136;
-  --ink: #eceef8;
-  --ink-muted: #b4b9d2;
-  --ink-faint: #9ca2bf;
-  --rule: #2c3350;
-  --rule-strong: rgba(236, 238, 248, 0.3);
-  --accent: #9fb0ff;
-  --fill: #ff8f86;
-  --fill-ink: #2a0d0b;
-  --frame-line: rgba(236, 238, 248, 0.1);
 }
 
 *,
@@ -48,6 +24,7 @@
 }
 
 html {
+  color-scheme: dark;
   background: var(--bg);
   -webkit-text-size-adjust: 100%;
 }
@@ -58,7 +35,6 @@ body {
   background: var(--bg);
   color: var(--ink);
   font: 16px/1.65 var(--sans);
-  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -68,11 +44,11 @@ a {
 }
 
 a:hover {
-  color: var(--accent);
+  color: var(--gold-bright);
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--gold-bright);
   outline-offset: 3px;
 }
 
@@ -91,72 +67,49 @@ a:hover {
 
 .topbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 16px;
   max-width: 960px;
-  min-height: 64px;
   margin: 0 auto;
-  border-bottom: 1px solid var(--rule);
-  font: 500 15px/1.4 var(--sans);
+  padding: 20px 0;
+  font: 500 12px/1.4 var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .topbar a {
   text-decoration: none;
-  color: var(--ink);
-}
-
-/* The name in the capybara game's pixel font, drawn 12 pixels tall: sharp at 24, 36 or 48px. */
-.topbar a:first-child,
-h1 {
-  font-family: var(--pixel);
-  font-weight: 400;
-  font-synthesis: none;
-  letter-spacing: 0;
-}
-
-.topbar a:first-child {
-  font-size: 24px;
-  line-height: 1;
+  color: var(--ink-muted);
 }
 
 .topbar a:hover {
-  color: var(--accent);
+  color: var(--ink);
 }
 
 .intro {
   max-width: 960px;
-  margin: 40px auto 28px;
+  margin: 24px auto 28px;
 }
 
 .kicker {
   margin: 0 0 12px;
-  font: 500 14px/1.4 var(--sans);
-  color: var(--ink-faint);
+  font: 500 12px/1.4 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
 h1 {
   margin: 0;
-  font-size: 48px;
-  line-height: 1.15;
+  font: 600 clamp(34px, 6vw, 60px)/1.04 var(--serif);
+  letter-spacing: -0.01em;
 }
 
 .lede {
   max-width: 62ch;
   margin: 16px 0 0;
   color: var(--ink-muted);
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 36px;
-  }
-
-  .lede {
-    font-size: 17px;
-  }
+  font-size: 17px;
 }
 
 /* ---------- game stage */
@@ -184,7 +137,8 @@ h1 {
   aspect-ratio: 3 / 2;
   overflow: hidden;
   background: var(--night);
-  box-shadow: 0 0 0 1px var(--frame-line);
+  border: 1px solid var(--rule);
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.8);
   /* Text and spacing inside the frame scale with it (cqw). Each cqw value has a vw
      fallback just before it for browsers without container units (Safari < 16). */
   container-type: inline-size;
@@ -199,7 +153,7 @@ h1 {
 }
 
 .frame:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--gold-bright);
   outline-offset: 3px;
 }
 
@@ -261,8 +215,8 @@ h1 {
   padding: 4vw;
   padding: 4cqw;
   text-align: center;
-  font-family: var(--arcade);
-  color: var(--game-ink);
+  font-family: var(--pixel);
+  color: var(--ink);
 }
 
 .screen p {
@@ -280,14 +234,14 @@ h1 {
 .bar {
   width: 40%;
   height: 8px;
-  border: 2px solid var(--game-ink);
+  border: 2px solid var(--ink);
   padding: 1px;
 }
 
 .bar span {
   display: block;
   height: 100%;
-  background: var(--game-ink);
+  background: var(--ink);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.15s linear;
@@ -313,7 +267,7 @@ h1 {
 }
 
 .big--red {
-  color: var(--game-red);
+  color: var(--red);
 }
 
 .hint {
@@ -321,13 +275,13 @@ h1 {
   font-size: clamp(10px, 1.45vw, 13px);
   font-size: clamp(10px, 1.45cqw, 13px);
   line-height: 1.8;
-  color: var(--game-ink-dim);
+  color: rgba(243, 239, 231, 0.8);
 }
 
 .score {
   font-size: clamp(10px, 1.9vw, 18px);
   font-size: clamp(10px, 1.9cqw, 18px);
-  color: var(--game-accent);
+  color: var(--gold-bright);
   text-transform: uppercase;
 }
 
@@ -336,12 +290,12 @@ h1 {
   align-items: center;
   gap: 1.2em;
   padding: 1.1em 1.6em;
-  border: 2px solid var(--game-ink);
+  border: 2px solid var(--ink);
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.7);
-  color: var(--game-ink);
-  font: 400 clamp(10px, 1.5vw, 14px)/1.2 var(--arcade);
-  font: 400 clamp(10px, 1.5cqw, 14px)/1.2 var(--arcade);
+  color: var(--ink);
+  font: 400 clamp(10px, 1.5vw, 14px)/1.2 var(--pixel);
+  font: 400 clamp(10px, 1.5cqw, 14px)/1.2 var(--pixel);
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.15s, color 0.15s, border-color 0.15s;
@@ -362,9 +316,9 @@ h1 {
 
 .pill:hover,
 .pill:focus-visible {
-  background: var(--game-accent);
-  border-color: var(--game-accent);
-  color: #1b1410;
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #111;
 }
 
 .screen--title .pill__icon {
@@ -397,7 +351,7 @@ h1 {
   width: 100%;
   min-height: 4.4em;
   padding: 1.1em 1.5em;
-  border: 3px solid var(--game-ink);
+  border: 3px solid var(--ink);
   border-radius: 10px;
   background: linear-gradient(to bottom, rgba(24, 33, 74, 0.94), rgba(10, 14, 38, 0.94));
   box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.5);
@@ -424,7 +378,9 @@ h1 {
   align-items: center;
   gap: 6px;
   margin: 0;
-  font: 400 14px/1.4 var(--sans);
+  font: 400 12px/1.4 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--ink-muted);
 }
 
@@ -440,9 +396,8 @@ kbd {
   padding: 0 6px;
   border: 1px solid var(--rule-strong);
   border-bottom-width: 2px;
-  border-radius: 4px;
-  background: var(--bg-raised);
-  font: 500 13px/1 var(--sans);
+  border-radius: 5px;
+  font: 500 12px/1 var(--mono);
   color: var(--ink);
 }
 
@@ -466,8 +421,8 @@ kbd {
 }
 
 .tool:hover:not(:disabled) {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--gold);
+  color: var(--gold-bright);
 }
 
 .tool:disabled {
@@ -514,7 +469,7 @@ kbd {
   padding: 0;
   border: 1.5px solid var(--rule-strong);
   border-radius: 50%;
-  background: var(--bg-raised);
+  background: rgba(243, 239, 231, 0.06);
   color: var(--ink);
   touch-action: none;
   -webkit-user-select: none;
@@ -529,9 +484,9 @@ kbd {
 }
 
 .pad.is-down {
-  background: var(--fill);
-  border-color: var(--fill);
-  color: var(--fill-ink);
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #111;
 }
 
 .pad--jump {
@@ -546,7 +501,8 @@ kbd {
 .rotate-hint {
   display: none;
   margin: 14px 0 0;
-  font: 400 14px/1.5 var(--sans);
+  font: 400 12px/1.5 var(--mono);
+  letter-spacing: 0.06em;
   color: var(--ink-faint);
   text-align: center;
 }
@@ -592,15 +548,9 @@ html.embed .rotate-hint {
     pointer-events: none;
   }
 
-  .game.touch .pad:not(.is-down) {
+  .game.touch .pad {
     pointer-events: auto;
-    border-color: rgba(243, 239, 231, 0.32);
     background: rgba(0, 0, 0, 0.35);
-    color: var(--game-ink);
-  }
-
-  .game.touch .pad.is-down {
-    pointer-events: auto;
   }
 }
 
@@ -616,12 +566,7 @@ html.embed .game.touch .pads {
 
 html.embed .game.touch .pad {
   pointer-events: auto;
-}
-
-html.embed .game.touch .pad:not(.is-down) {
-  border-color: rgba(243, 239, 231, 0.32);
   background: rgba(0, 0, 0, 0.35);
-  color: var(--game-ink);
 }
 
 /* ---------- notes */
@@ -638,8 +583,10 @@ html.embed .game.touch .pad:not(.is-down) {
 
 .note h2 {
   margin: 0 0 16px;
-  font: 600 18px/1.3 var(--sans);
-  color: var(--ink);
+  font: 500 12px/1.4 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
 .note p {
@@ -694,7 +641,9 @@ dl {
 }
 
 dt {
-  font: 500 13px/1.4 var(--sans);
+  font: 500 11px/1.4 var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--ink-faint);
 }
 
@@ -717,7 +666,7 @@ dd {
   }
 
   .keys {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 

@@ -4,7 +4,7 @@ Source for **https://lily-feng.com/**, the portfolio of Xinyue (Lily) Feng, a Co
 
 | Project | Live | Source |
 | --- | --- | --- |
-| **Yuzu Onsen Capybaras**: a cozy pixel-art life sim (JavaScript, HTML canvas, Electron) | [winter demo](https://capybara.sam-si.cn/) · [case study](https://lily-feng.com/work/yuzu-onsen-capybaras/) | private repository |
+| **Yuzu Onsen Capybaras**: a cozy pixel-art life sim (JavaScript, HTML canvas, Electron) | [winter demo](https://capybara.lily-feng.com/) · [case study](https://lily-feng.com/work/yuzu-onsen-capybaras/) | private repository |
 | **Otherworlds**: a crossover boss mod for Terraria, in development (C#, tModLoader) | [case study](https://lily-feng.com/work/otherworlds/) | not yet public |
 | **Wizarding World**: a Harry Potter mod for Terraria (C#, tModLoader) | [case study](https://lily-feng.com/work/wizarding-world/) | [lillly1/WizardingWorld](https://github.com/lillly1/WizardingWorld) |
 | **The Adventures of Edgeworth**: an Ace Attorney platformer (Java Swing, ported to the web) | [play](https://lily-feng.com/play/edgeworth/) · [case study](https://lily-feng.com/work/edgeworth/) | [`projects/edgeworth`](projects/edgeworth) |
