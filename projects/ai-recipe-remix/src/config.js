@@ -12,4 +12,4 @@ export const SOURCE_URL = 'https://github.com/lillly1/lillly1.github.io/tree/mai
 export const README_SETUP_URL =
   'https://github.com/lillly1/lillly1.github.io/blob/main/projects/ai-recipe-remix/README.md#local-setup';
 /** The project's page in Xinyue Feng's portfolio (linked from the demo banner). */
-export const PROJECT_PAGE_URL = 'https://lillly1.github.io/work/recipe-remix/';
+export const PROJECT_PAGE_URL = 'https://lily-feng.com/work/recipe-remix/';

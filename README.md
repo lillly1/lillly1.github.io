@@ -1,26 +1,27 @@
 # Xinyue Feng — portfolio
 
-Source for **https://lillly1.github.io/**, the portfolio of Xinyue (Lily) Feng, a Computer Science student at Kean University (class of 2027).
+Source for **https://lily-feng.com/**, the portfolio of Xinyue (Lily) Feng, a Computer Science student at Kean University (class of 2027).
 
 | Project | Live | Source |
 | --- | --- | --- |
-| **Yuzu Onsen Capybaras**: a cozy pixel-art life sim (JavaScript, HTML canvas, Electron) | [winter demo](https://capybara.sam-si.cn/) · [case study](https://lillly1.github.io/work/yuzu-onsen-capybaras/) | private repository |
-| **Otherworlds**: a crossover boss mod for Terraria, in development (C#, tModLoader) | [case study](https://lillly1.github.io/work/otherworlds/) | not yet public |
-| **Wizarding World**: a Harry Potter mod for Terraria (C#, tModLoader) | [case study](https://lillly1.github.io/work/wizarding-world/) | [lillly1/WizardingWorld](https://github.com/lillly1/WizardingWorld) |
-| **The Adventures of Edgeworth**: an Ace Attorney platformer (Java Swing, ported to the web) | [play](https://lillly1.github.io/play/edgeworth/) · [case study](https://lillly1.github.io/work/edgeworth/) | [`projects/edgeworth`](projects/edgeworth) |
-| **AI Recipe Remix**: recipes and dish photos from the ingredients you have (React, Express, OpenAI) | [demo](https://lillly1.github.io/play/recipe-remix/) · [case study](https://lillly1.github.io/work/recipe-remix/) | [`projects/ai-recipe-remix`](projects/ai-recipe-remix) |
-| **Tic-Tac-Toe vs. AI**: rule-based AI vs. minimax, with a “Show AI thinking” overlay | [play](https://lillly1.github.io/play/tic-tac-toe/) · [case study](https://lillly1.github.io/work/tic-tac-toe/) | [`projects/tic-tac-toe`](projects/tic-tac-toe) |
+| **Yuzu Onsen Capybaras**: a cozy pixel-art life sim (JavaScript, HTML canvas, Electron) | [winter demo](https://capybara.sam-si.cn/) · [case study](https://lily-feng.com/work/yuzu-onsen-capybaras/) | private repository |
+| **Otherworlds**: a crossover boss mod for Terraria, in development (C#, tModLoader) | [case study](https://lily-feng.com/work/otherworlds/) | not yet public |
+| **Wizarding World**: a Harry Potter mod for Terraria (C#, tModLoader) | [case study](https://lily-feng.com/work/wizarding-world/) | [lillly1/WizardingWorld](https://github.com/lillly1/WizardingWorld) |
+| **The Adventures of Edgeworth**: an Ace Attorney platformer (Java Swing, ported to the web) | [play](https://lily-feng.com/play/edgeworth/) · [case study](https://lily-feng.com/work/edgeworth/) | [`projects/edgeworth`](projects/edgeworth) |
+| **AI Recipe Remix**: recipes and dish photos from the ingredients you have (React, Express, OpenAI) | [demo](https://lily-feng.com/play/recipe-remix/) · [case study](https://lily-feng.com/work/recipe-remix/) | [`projects/ai-recipe-remix`](projects/ai-recipe-remix) |
+| **Tic-Tac-Toe vs. AI**: rule-based AI vs. minimax, with a “Show AI thinking” overlay | [play](https://lily-feng.com/play/tic-tac-toe/) · [case study](https://lily-feng.com/work/tic-tac-toe/) | [`projects/tic-tac-toe`](projects/tic-tac-toe) |
 
-The whole portfolio is also a 20-page PDF (A4 landscape): [download it](https://lillly1.github.io/assets/xinyue-feng-portfolio.pdf).
+The whole portfolio is also a 20-page PDF (A4 landscape): [download it](https://lily-feng.com/assets/xinyue-feng-portfolio.pdf).
 
 ## Layout
 
 ```
-site/        the static website GitHub Pages serves (plain HTML/CSS/JS, no build step)
+site/        the static website Cloudflare Pages serves at lily-feng.com (plain HTML/CSS/JS, no build step)
   play/      playable builds copied or built from projects/
   work/      one case-study page per project
 projects/    source code for each project
 pdf/         the PDF portfolio as one HTML page (portfolio.html + portfolio.css), using the site's fonts and pictures
+redirect/    the pages lillly1.github.io serves: each one forwards to the same path on lily-feng.com
 scripts/     build-site.sh copies the games into site/play/ (--recipe also rebuilds the React demo)
              build-pdf.mjs prints pdf/ to site/assets/xinyue-feng-portfolio.pdf
              make-og.mjs draws the newer case studies' social cards (site/assets/img/og/) from og/card.html
@@ -44,7 +45,7 @@ node check-site.mjs                            # sideways scrolling, overlaps, b
                                                # ENGINE=webkit or ENGINE=firefox for the other engines
 ```
 
-Each project has its own README with setup and tests. Pushing to `main` runs every project's tests in GitHub Actions and, if they pass, rebuilds `site/play/` from `projects/` and deploys `site/` to GitHub Pages.
+Each project has its own README with setup and tests. Cloudflare Pages serves the committed `site/` at https://lily-feng.com/ on every push to `main`, so run `scripts/build-site.sh` (with `--recipe` after changing the React demo) and commit `site/play/` along with a game change. GitHub Actions runs every project's tests and checks that `site/play/` matches `projects/`; GitHub Pages only redirects the old address, lillly1.github.io, to the same page on lily-feng.com (`redirect/`).
 
 ## Notes
 

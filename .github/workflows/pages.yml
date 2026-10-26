@@ -56,6 +56,13 @@ jobs:
           ./build.sh
           ./build.sh test
 
+      # Cloudflare serves the committed site/ as it is, so its copies of the games must match projects/.
+      - name: site/play is up to date with projects/
+        run: |
+          scripts/build-site.sh
+          git status --porcelain -- site/play
+          test -z "$(git status --porcelain -- site/play)"
+
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: test
@@ -69,17 +76,11 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 22
-
-      # Deploy fresh builds of the games, even if a committed copy is stale.
-      - name: Rebuild site/play from projects/
-        run: scripts/build-site.sh --recipe
-
+      # The site itself is served by Cloudflare Pages at lily-feng.com, straight from the committed site/.
+      # GitHub Pages keeps the old address, lillly1.github.io, sending every page there.
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: site
+          path: redirect
       - id: deployment
         uses: actions/deploy-pages@v5

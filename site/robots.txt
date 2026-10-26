@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://lillly1.github.io/sitemap.xml
+Sitemap: https://lily-feng.com/sitemap.xml

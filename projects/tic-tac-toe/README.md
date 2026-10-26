@@ -8,7 +8,7 @@ extended for her portfolio with AI coding tools (see [Credits](#credits)).
 Plain HTML, CSS and JavaScript: no frameworks, no build step, no external
 requests.
 
-**Play it:** https://lillly1.github.io/play/tic-tac-toe/
+**Play it:** https://lily-feng.com/play/tic-tac-toe/
 
 ![The game on Medium with “Show AI thinking” on: after X takes a corner, O the center, X the opposite corner and O another corner, the overlay shows the one square that wins for X](docs/screenshot.jpg)
 
@@ -130,7 +130,7 @@ footer, leaving the game and its controls with no outer margin. Below 600 px
 wide it stacks into one column.
 
 ```html
-<iframe id="tic-tac-toe" src="https://lillly1.github.io/play/tic-tac-toe/?embed=1"
+<iframe id="tic-tac-toe" src="https://lily-feng.com/play/tic-tac-toe/?embed=1"
         title="Tic-tac-toe: play with AI" loading="lazy"
         style="display:block; width:100%; height:600px; border:0"></iframe>
 <script>

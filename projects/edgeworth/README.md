@@ -2,7 +2,7 @@
 
 An *Ace Attorney* fan platformer by **Xinyue (Lily) Feng**, written in Java Swing for CPS 2231 at Wenzhou-Kean University (April 26 – May 12, 2024). Guide Miles Edgeworth through six scenes: stomp Winston Payne, jump over Manfred von Karma, dodge Wendy Oldbag, hit Phoenix blocks for points, and find the invisible block Detective Gumshoe is hinting at.
 
-**Play it in the browser:** https://lillly1.github.io/play/edgeworth/
+**Play it in the browser:** https://lily-feng.com/play/edgeworth/
 
 | Folder | What it is |
 | --- | --- |
