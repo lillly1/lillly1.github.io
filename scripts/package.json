@@ -6,6 +6,7 @@
   "scripts": {
     "og": "node make-og.mjs",
     "pdf": "node build-pdf.mjs",
+    "resume": "node build-resume.mjs",
     "check": "node check-site.mjs"
   },
   "devDependencies": {

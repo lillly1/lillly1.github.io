@@ -11,7 +11,7 @@ Source for **https://lily-feng.com/**, the portfolio of Xinyue (Lily) Feng, a Co
 | **AI Recipe Remix**: recipes and dish photos from the ingredients you have (React, Express, OpenAI) | [demo](https://lily-feng.com/play/recipe-remix/) · [case study](https://lily-feng.com/work/recipe-remix/) | [`projects/ai-recipe-remix`](projects/ai-recipe-remix) |
 | **Tic-Tac-Toe vs. AI**: rule-based AI vs. minimax, with a “Show AI thinking” overlay | [play](https://lily-feng.com/play/tic-tac-toe/) · [case study](https://lily-feng.com/work/tic-tac-toe/) | [`projects/tic-tac-toe`](projects/tic-tac-toe) |
 
-The whole portfolio is also a 20-page PDF (A4 landscape): [download it](https://lily-feng.com/assets/xinyue-feng-portfolio.pdf).
+The whole portfolio is also a 20-page PDF (A4 landscape): [download it](https://lily-feng.com/assets/xinyue-feng-portfolio.pdf). Her résumé: [lily-feng.com/resume.pdf](https://lily-feng.com/resume.pdf).
 
 ## Layout
 
@@ -24,6 +24,7 @@ pdf/         the PDF portfolio as one HTML page (portfolio.html + portfolio.css)
 redirect/    the pages lillly1.github.io serves: each one forwards to the same path on lily-feng.com
 scripts/     build-site.sh copies the games into site/play/ (--recipe also rebuilds the React demo)
              build-pdf.mjs prints pdf/ to site/assets/xinyue-feng-portfolio.pdf
+             build-resume.mjs makes site/resume.pdf from her LaTeX résumé, kept out of this repository: no GPA, the site's email
              make-og.mjs draws the newer case studies' social cards (site/assets/img/og/) from og/card.html
              check-site.mjs checks every page's layout at phone, tablet and desktop sizes
 ```
@@ -40,6 +41,7 @@ The PDF, the social cards and the layout checks use headless browsers (Playwrigh
 ```bash
 cd scripts && npm install && npx playwright install chromium webkit firefox
 node build-pdf.mjs                             # checks every page for overflow, then writes the PDF
+node build-resume.mjs                          # the résumé, from ~/Downloads/Xinyue_Feng_Resume_v2 (needs tectonic, poppler)
 node make-og.mjs                               # every card, or name one: node make-og.mjs otherworlds
 node check-site.mjs                            # sideways scrolling, overlaps, broken pictures and links;
                                                # ENGINE=webkit or ENGINE=firefox for the other engines

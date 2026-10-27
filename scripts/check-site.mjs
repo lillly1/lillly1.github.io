@@ -27,7 +27,7 @@ const ENGINE = process.env.ENGINE || 'chromium';
 const PAGES = ['', 'about/', 'work/yuzu-onsen-capybaras/', 'work/otherworlds/', 'work/wizarding-world/', 'work/edgeworth/',
   'work/recipe-remix/', 'work/tic-tac-toe/', '404.html'];
 const SIZES = SELF_TEST ? [[390, 664]] : FLAKY ? [[390, 664], [1440, 900]]
-  : [[320, 568], [375, 553], [390, 600], [390, 664], [393, 659], [844, 390], [768, 1024], [1366, 657], [1440, 900]];
+  : [[320, 568], [375, 553], [390, 600], [390, 664], [393, 659], [844, 390], [768, 1024], [1024, 768], [1366, 657], [1440, 900]];
 const THEMES = SELF_TEST || FLAKY ? ['dark'] : ['dark', 'light'];
 
 // The site as it is served, at the root of lily-feng.com, without a server.

@@ -381,7 +381,7 @@ img.pixelated,
   --parade: 188px; /* the pixel-art strip: hearts, walkers and headroom for Edgeworth's hop */
   position: relative;
   display: grid;
-  grid-template-rows: 1fr auto; /* the introduction, then the parade link below 1024px */
+  grid-template-rows: 1fr auto; /* the introduction, then the parade link (unless it sits in the corner) */
   min-height: max(620px, calc(100vh - var(--header))); /* before svh support */
   min-height: max(620px, calc(100svh - var(--header)));
   padding: clamp(48px, 9vh, 96px) 0 var(--parade);
@@ -474,7 +474,7 @@ img.pixelated,
   image-rendering: pixelated;
 }
 
-/* Below 1024px: a quiet link of its own under the introduction, clear of the buttons */
+/* A quiet link of its own under the introduction, clear of the buttons */
 .parade__link {
   justify-self: center;
   padding: 12px 0;
@@ -504,8 +504,9 @@ img.pixelated,
   }
 }
 
-/* Wider screens: a caption at the bottom right, just above the strip and well clear of the buttons */
-@media (min-width: 1024px) {
+/* Wide screens with the height for it: a caption at the bottom right, just above the strip and well clear of
+   the buttons (in a shorter window it would sit right under them) */
+@media (min-width: 1024px) and (min-height: 760px) {
   .parade__link {
     position: absolute;
     right: var(--gutter);
