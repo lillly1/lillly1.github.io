@@ -118,6 +118,7 @@ figcaption { margin-top: 1.5mm; font: italic 400 7.2pt/1.4 var(--serif); color: 
 .cv { margin-bottom: 3mm; }
 .cv__row { display: flex; justify-content: space-between; gap: 3mm; margin: 0; font-size: 8.4pt; line-height: 1.4; }
 .cv__row span { font: 500 5.8pt/2 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.cv__row b { text-wrap: balance; } /* a long name breaks in the middle, not before its last word */
 .cv__where { margin: 0; font-size: 7.8pt; font-style: italic; color: var(--muted); }
 .cv__note { margin: 0.6mm 0 0; font-size: 7.6pt; line-height: 1.45; color: var(--muted); }
 .contact { display: grid; gap: 2.4mm; margin-top: 6mm; padding-top: 4mm; border-top: 1px solid var(--rule); }
